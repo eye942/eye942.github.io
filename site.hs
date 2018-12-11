@@ -2,11 +2,13 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
+import           Hakyll.Core.Logger
 
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main =
+  hakyll $ do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -21,7 +23,7 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
-    match "posts/*" $ do
+    match "blog/posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
@@ -46,10 +48,24 @@ main = hakyll $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            posts <- recentFirst =<< loadAll "blog/posts/*"
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Home"                `mappend`
+                    defaultContext
+
+            getResourceBody
+                >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                >>= relativizeUrls
+
+    match "blog/index.html" $ do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAll "blog/posts/*"
+            let indexCtx =
+                    listField "posts" postCtx (return posts) `mappend`
+                    constField "title" "Blog"                `mappend`
                     defaultContext
 
             getResourceBody

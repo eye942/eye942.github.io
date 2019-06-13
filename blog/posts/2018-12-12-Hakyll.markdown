@@ -3,6 +3,7 @@ title: Hakyll
 author: Eric
 ---
 
+
 Welcome to my new website! This website will serve as a personal website to showcase projects and achievements since I need to compile all that stuff into one place... if I had any amazing achievements or projects in the first place. Since I don't have a billion dollar start-up idea, I'll just showcase my mundane portfolio. This place will also serve as an outlet for any ramblings I might have.
 
 The first project on the list is going to be this website since we're already on the topic.

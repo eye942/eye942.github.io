@@ -9,7 +9,7 @@ The first project on the list is going to be this website since we're already on
 
 I'm using the Hakyll static website generator to create a static website because I don't really wanna pay for dynamic website hosting. Also, static websites are supposed to be easier and quicker to load compared to dynamic websites.
 
-### Why Hakyll?
+### Why Hakyll
 Github Pages is most easily integrated with Jekyll, which is Ruby, but I always wanted to do something with Haskell, and Hakyll is like a Jekyll port to Haskell with a lot of extra additions.
 For those who haven't heard of Haskell, it's a functional programming language (no, functional doesn't just mean that the programming language works).
 It's one of the best in the field of studying Type Theory supposedly, which is really cool since Type Theory is one of the few intersections between math and CS.

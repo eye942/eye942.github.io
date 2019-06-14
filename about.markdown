@@ -1,5 +1,5 @@
 ---
-title: About Me
+title: About
 ---
 I am a computational linguistics major at USC.
 

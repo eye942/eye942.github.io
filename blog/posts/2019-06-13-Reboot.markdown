@@ -17,4 +17,6 @@ Now that it's summer and that I didn't go ham looking for internships (read: I a
 
     Progress: I've learned most of the basic concepts of Pharo, probably. I've implemented the game (I think)... Right now, I'm implementing the UI of the game, which is quite a bear since there isn't too much documentation :(. After I've implemented the UI and attached all the components, I'll hopefully have a functioning BlackJack game.
 
+Additionally, I've chosen to use UIKit as the  front-end framework on top of Hakyll. I know my way around Bootstrap (sort of), so why not try something new? They're all pretty similar anyways.
+
 Anyways, I've been pretty verbose. Maybe I won't be as wordy in the future.

@@ -79,7 +79,6 @@ main = do
 
     match "templates/*" $ compile templateBodyCompiler
 
-
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
